@@ -4,7 +4,7 @@ import Logo from "./Logo";
 function Footer() {
   return (
     <footer className="footer">
-      Footer
+      made by NuriaCD 🐜
       <div className="footer__logo">
         <Logo />
       </div>
