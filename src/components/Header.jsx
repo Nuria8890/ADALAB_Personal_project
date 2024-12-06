@@ -1,10 +1,13 @@
 import "../styles/layout/Header.scss";
-import Carrito from "../images/carrito_fast.png";
+import Logo from "./Logo";
 
 function Header() {
   return (
     <header className="header">
-      <img className="header__logo" src={Carrito} alt="carrito" />
+      <div className="header__logo">
+        <Logo />
+      </div>
+
       <h1>Súper compras</h1>
     </header>
   );
