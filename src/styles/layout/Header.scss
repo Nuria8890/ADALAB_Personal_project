@@ -1,5 +1,11 @@
 .header {
   display: flex;
   align-items: center;
-  justify-content: center;
+  gap: 20px;
+  padding: 10px;
+  background-color: red;
+
+  &__logo {
+    width: 70px;
+  }
 }
