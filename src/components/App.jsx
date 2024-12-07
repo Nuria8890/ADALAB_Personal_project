@@ -37,6 +37,7 @@ function App() {
 
   const changeProductsList = (value) => {
     localStorage.set("productList", [...productsList, value]);
+    setProduct("");
     setProductsList([...productsList, value]);
   };
 
