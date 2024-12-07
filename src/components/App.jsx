@@ -43,6 +43,7 @@ function App() {
         onChangeInput={changeInputValue}
         product={product}
         onChangeProductsList={changeProductsList}
+        productsList={productsList}
       />
     </>
   );

@@ -6,7 +6,12 @@ import ProductsList from "./Products/ProductsList";
 import Supermarkets from "./Supermarkets";
 import PropTypes from "prop-types";
 
-function Landing({ onChangeInput, product, onChangeProductsList }) {
+function Landing({
+  onChangeInput,
+  product,
+  onChangeProductsList,
+  productsList,
+}) {
   return (
     <>
       <Header />
@@ -17,7 +22,7 @@ function Landing({ onChangeInput, product, onChangeProductsList }) {
             product={product}
             onChangeProductsList={onChangeProductsList}
           />
-          <ProductsList />
+          <ProductsList productsList={productsList} />
         </section>
         <section>
           <Supermarkets />
@@ -34,4 +39,5 @@ Landing.propTypes = {
   onChangeInput: PropTypes.func.isRequired,
   product: PropTypes.string.isRequired,
   onChangeProductsList: PropTypes.func.isRequired,
+  productsList: PropTypes.array.isRequired,
 };
