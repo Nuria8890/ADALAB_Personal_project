@@ -16,6 +16,9 @@ function Landing({
     <>
       <Header />
       <main className="landing__main">
+        <section className="landing__supers">
+          <Supermarkets />
+        </section>
         <section className="landing__products">
           <ProductsForm
             onChangeInput={onChangeInput}
@@ -23,9 +26,6 @@ function Landing({
             onChangeProductsList={onChangeProductsList}
           />
           <ProductsList productsList={productsList} />
-        </section>
-        <section>
-          <Supermarkets />
         </section>
       </main>
       <Footer />
