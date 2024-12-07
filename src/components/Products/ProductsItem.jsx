@@ -1,7 +1,8 @@
 import PropTypes from "prop-types";
+import "../../styles/layout/ProductsItem.scss";
 
 function ProductsItem({ item }) {
-  return <div>{item}</div>;
+  return <div className="productsItem__container">{item}</div>;
 }
 
 export default ProductsItem;

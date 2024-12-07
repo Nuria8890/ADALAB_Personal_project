@@ -31,7 +31,6 @@ function App() {
     const productFind = productsList.find((item) => {
       return item.toLowerCase() === value.toLowerCase();
     });
-    console.log("productFind", productFind);
 
     if (value !== "" && !productFind) {
       localStorage.set("productList", [...productsList, value]);
