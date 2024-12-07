@@ -1,5 +1,13 @@
-.landing__main {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
+.landing {
+  &__main {
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-around;
+  }
+
+  &__products {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
 }
