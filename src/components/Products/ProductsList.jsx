@@ -1,9 +1,12 @@
 import PropTypes from "prop-types";
+import ProductsItem from "./ProductsItem";
 
 function ProductsList({ productsList }) {
-  console.log("productsList", productsList);
+  const items = productsList.map((item, i) => (
+    <ProductsItem item={item} key={i} />
+  ));
 
-  return <div>Products List</div>;
+  return <div>{items}</div>;
 }
 
 export default ProductsList;
