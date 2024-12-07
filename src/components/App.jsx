@@ -33,9 +33,17 @@ function App() {
     setProduct(value);
   };
 
+  const changeProductsList = (value) => {
+    setProductsList([...productsList, value]);
+  };
+
   return (
     <>
-      <Landing onChangeInput={changeInputValue} product={product} />
+      <Landing
+        onChangeInput={changeInputValue}
+        product={product}
+        onChangeProductsList={changeProductsList}
+      />
     </>
   );
 }

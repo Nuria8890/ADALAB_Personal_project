@@ -1,13 +1,13 @@
 import PropTypes from "prop-types";
 
-function ProductsForm({ onChangeInput, product }) {
+function ProductsForm({ onChangeInput, product, onChangeProductsList }) {
   const handleChangeInput = (event) => {
     onChangeInput(event.target.value);
   };
 
   const handleClickButton = (event) => {
     event.preventDefault();
-    console.log("product", product);
+    onChangeProductsList(product);
   };
 
   return (
@@ -35,4 +35,5 @@ export default ProductsForm;
 ProductsForm.propTypes = {
   onChangeInput: PropTypes.func.isRequired,
   product: PropTypes.string.isRequired,
+  onChangeProductsList: PropTypes.func.isRequired,
 };
