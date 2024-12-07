@@ -14,20 +14,10 @@ function App() {
     localStorage.get("productList", [])
   );
 
-  // useEffect
-
-  // useEffect(() => {
-  //   callToApi().then((response) => {
-  //     setVariable(response);
-  //   });
-  // }, [variable]);
-
-  // useEffect(() => {
-  //   localStorage.set("variable", variable);
-
-  // Este useEffect solo se ejecutará cuando cambie la variable
-  //   console.log("Ha cambiado la variable");
-  // }, [variable]);
+  // Funciones
+  const filteredProducts = productsList.filter((item) => {
+    return item.toLowerCase().includes(product.toLowerCase());
+  });
 
   // Eventos
 
@@ -47,7 +37,7 @@ function App() {
         onChangeInput={changeInputValue}
         product={product}
         onChangeProductsList={changeProductsList}
-        productsList={productsList}
+        productsList={filteredProducts}
       />
     </>
   );
