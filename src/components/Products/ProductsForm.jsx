@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-function Products({ onChangeInput }) {
+function ProductsForm({ onChangeInput }) {
   const handleChangeInput = (event) => {
     onChangeInput(event.target.value);
   };
@@ -21,8 +21,8 @@ function Products({ onChangeInput }) {
   );
 }
 
-export default Products;
+export default ProductsForm;
 
-Products.propTypes = {
+ProductsForm.propTypes = {
   onChangeInput: PropTypes.func.isRequired,
 };

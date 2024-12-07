@@ -1,7 +1,7 @@
 import "../styles/layout/Landing.scss";
 import Footer from "./Footer";
 import Header from "./Header";
-import Products from "./Products/Products";
+import ProductsForm from "./Products/ProductsForm";
 import ProductsList from "./Products/ProductsList";
 import Supermarkets from "./Supermarkets";
 import PropTypes from "prop-types";
@@ -12,7 +12,7 @@ function Landing({ onChangeInput }) {
       <Header />
       <main className="landing__main">
         <section className="landing__products">
-          <Products onChangeInput={onChangeInput} />
+          <ProductsForm onChangeInput={onChangeInput} />
           <ProductsList />
         </section>
         <section>
