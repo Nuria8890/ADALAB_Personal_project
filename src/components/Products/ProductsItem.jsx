@@ -7,5 +7,5 @@ function ProductsItem({ item }) {
 export default ProductsItem;
 
 ProductsItem.propTypes = {
-  item: PropTypes.array.isRequired,
+  item: PropTypes.string.isRequired,
 };

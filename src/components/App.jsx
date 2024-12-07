@@ -1,6 +1,6 @@
 import "../styles/App.scss";
 // import callToApi from "../services/api";
-// import localStorage from "../services/localStorage";
+import localStorage from "../services/localStorage";
 import { useState } from "react";
 // import { Link, Route, Routes } from "react-router-dom";
 // import Form from "./Form";
@@ -10,7 +10,9 @@ function App() {
   // Estados
 
   const [product, setProduct] = useState("");
-  const [productsList, setProductsList] = useState([]);
+  const [productsList, setProductsList] = useState(
+    localStorage.get("productList", [])
+  );
 
   // useEffect
 
@@ -34,6 +36,7 @@ function App() {
   };
 
   const changeProductsList = (value) => {
+    localStorage.set("productList", [...productsList, value]);
     setProductsList([...productsList, value]);
   };
 
