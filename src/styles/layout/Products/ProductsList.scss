@@ -4,4 +4,20 @@
   // align-self: self-start;
   height: 183px;
   overflow-y: auto;
+
+  @media (min-height: 740px) {
+    height: 220px;
+  }
+
+  @media (min-height: 844px) {
+    height: 260px;
+  }
+
+  @media (min-height: 896px) {
+    height: 284px;
+  }
+
+  @media (min-height: 932px) {
+    height: 310px;
+  }
 }
