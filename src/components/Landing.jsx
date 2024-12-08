@@ -10,6 +10,7 @@ function Landing({
   product,
   onChangeProductsList,
   productsList,
+  onClickDeleteProducts,
   onChangeInputSupermarket,
   supermarket,
   onChangeSupermarketsList,
@@ -25,7 +26,10 @@ function Landing({
             product={product}
             onChangeProductsList={onChangeProductsList}
           />
-          <ProductsList productsList={productsList} />
+          <ProductsList
+            productsList={productsList}
+            onClickDeleteProducts={onClickDeleteProducts}
+          />
         </section>
         <section className="landing__supers">
           <h3>Supermercados</h3>
@@ -49,6 +53,7 @@ Landing.propTypes = {
   product: PropTypes.string.isRequired,
   onChangeProductsList: PropTypes.func.isRequired,
   productsList: PropTypes.array.isRequired,
+  onClickDeleteProducts: PropTypes.func.isRequired,
   onChangeInputSupermarket: PropTypes.func.isRequired,
   supermarket: PropTypes.string.isRequired,
   onChangeSupermarketsList: PropTypes.func.isRequired,

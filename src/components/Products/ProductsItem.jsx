@@ -2,9 +2,9 @@ import PropTypes from "prop-types";
 import "../../styles/layout/Products/ProductsItem.scss";
 import { MdDelete } from "react-icons/md";
 
-function ProductsItem({ item, index }) {
+function ProductsItem({ item, index, onClickDeleteProducts }) {
   const handleClickDelete = () => {
-    console.log("borro", index);
+    onClickDeleteProducts(index);
   };
 
   return (
@@ -23,4 +23,5 @@ export default ProductsItem;
 ProductsItem.propTypes = {
   item: PropTypes.string.isRequired,
   index: PropTypes.number.isRequired,
+  onClickDeleteProducts: PropTypes.func.isRequired,
 };

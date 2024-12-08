@@ -48,6 +48,10 @@ function App() {
     }
   };
 
+  const clickDeleteProducts = (index) => {
+    console.log("borro", index);
+  };
+
   const changeInputSupermarketValue = (value) => {
     setSupermarket(value);
   };
@@ -73,6 +77,7 @@ function App() {
         product={product}
         onChangeProductsList={changeProductsList}
         productsList={filteredProducts}
+        onClickDeleteProducts={clickDeleteProducts}
         onChangeInputSupermarket={changeInputSupermarketValue}
         supermarket={supermarket}
         onChangeSupermarketsList={changeSupermarketsList}
