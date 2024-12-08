@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import ProductsItem from "./ProductsItem";
-import "../../styles/layout/ProductsList.scss";
+import "../../styles/layout/Products/ProductsList.scss";
 
 function ProductsList({ productsList }) {
   const items = productsList.map((item, i) => (
