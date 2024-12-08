@@ -7,7 +7,7 @@ function SupermarketsList({ supermarketsList }) {
     <SupermarketsItem item={item} key={i} />
   ));
 
-  return <div className="SupermarketsList__container">{items}</div>;
+  return <div className="supermarketsList__container">{items}</div>;
 }
 
 export default SupermarketsList;

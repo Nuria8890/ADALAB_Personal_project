@@ -2,6 +2,7 @@
   &__main {
     display: flex;
     flex-direction: column;
+    height: auto;
     // margin-top: 20px;
     // justify-content: space-around;
   }
@@ -19,7 +20,6 @@
     flex-direction: column;
     gap: 5px;
     margin: 10px;
-    background-color: aqua;
     height: 50%;
   }
 }

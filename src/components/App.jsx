@@ -4,7 +4,9 @@ import localStorage from "../services/localStorage";
 import { useState } from "react";
 // import { Link, Route, Routes } from "react-router-dom";
 // import Form from "./Form";
+import Header from "./Header";
 import Landing from "./Landing";
+import Footer from "./Footer";
 
 function App() {
   // Estados
@@ -65,6 +67,7 @@ function App() {
 
   return (
     <>
+      <Header />
       <Landing
         onChangeInputProduct={changeInputProductValue}
         product={product}
@@ -75,6 +78,7 @@ function App() {
         onChangeSupermarketsList={changeSupermarketsList}
         supermarketsList={filteredSupermarkets}
       />
+      <Footer />
     </>
   );
 }

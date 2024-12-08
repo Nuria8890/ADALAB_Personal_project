@@ -1,6 +1,4 @@
 import "../styles/layout/Landing.scss";
-import Footer from "./Footer";
-import Header from "./Header";
 import ProductsForm from "./Products/ProductsForm";
 import ProductsList from "./Products/ProductsList";
 import SupermarketsForm from "./Supermarkets/SupermarketsForm";
@@ -19,7 +17,6 @@ function Landing({
 }) {
   return (
     <>
-      <Header />
       <main className="landing__main">
         <section className="landing__products">
           <h3>Productos</h3>
@@ -41,7 +38,6 @@ function Landing({
           <SupermarketsList supermarketsList={supermarketsList} />
         </section>
       </main>
-      <Footer />
     </>
   );
 }
