@@ -3,7 +3,7 @@ import Footer from "./Footer";
 import Header from "./Header";
 import ProductsForm from "./Products/ProductsForm";
 import ProductsList from "./Products/ProductsList";
-import Supermarkets from "./Supermarkets";
+// import Supermarkets from "./Supermarkets";
 import PropTypes from "prop-types";
 
 function Landing({
@@ -16,9 +16,9 @@ function Landing({
     <>
       <Header />
       <main className="landing__main">
-        <section className="landing__supers">
+        {/* <section className="landing__supers">
           <Supermarkets />
-        </section>
+        </section> */}
         <section className="landing__products">
           <ProductsForm
             onChangeInput={onChangeInput}
