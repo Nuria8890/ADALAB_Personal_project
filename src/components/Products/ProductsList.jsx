@@ -4,7 +4,7 @@ import "../../styles/layout/Products/ProductsList.scss";
 
 function ProductsList({ productsList }) {
   const items = productsList.map((item, i) => (
-    <ProductsItem item={item} key={i} />
+    <ProductsItem item={item} key={i} index={i} />
   ));
 
   return <ul className="productsList__container">{items}</ul>;
