@@ -7,7 +7,7 @@ function ProductsList({ productsList }) {
     <ProductsItem item={item} key={i} />
   ));
 
-  return <div className="productsList__container">{items}</div>;
+  return <ul className="productsList__container">{items}</ul>;
 }
 
 export default ProductsList;

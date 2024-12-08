@@ -3,11 +3,18 @@ import "../../styles/layout/Products/ProductsItem.scss";
 import { MdDelete } from "react-icons/md";
 
 function ProductsItem({ item }) {
+  const handleClickDelete = () => {
+    console.log("borro");
+  };
+
   return (
-    <div className="productsItem__container">
-      {item}
-      <MdDelete />
-    </div>
+    <li className="productsItem__container">
+      <div className="productsItem__container__checkbox">
+        <input type="checkbox" name="product" id="product" />
+        <label htmlFor="product">{item}</label>
+      </div>
+      <MdDelete onClick={handleClickDelete} />
+    </li>
   );
 }
 
