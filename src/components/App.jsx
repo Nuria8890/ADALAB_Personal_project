@@ -11,17 +11,25 @@ function App() {
 
   const [product, setProduct] = useState("");
   const [productsList, setProductsList] = useState(
-    localStorage.get("productList", [])
+    localStorage.get("productsList", [])
   );
 
+  const [supermarket, setSupermarket] = useState("");
+  const [supermarketsList, setSupermarketsList] = useState(
+    localStorage.get("supermarketsList", [])
+  );
   // Funciones
   const filteredProducts = productsList.filter((item) => {
     return item.toLowerCase().includes(product.toLowerCase());
   });
 
+  const filteredSupermarkets = supermarketsList.filter((item) => {
+    return item.toLowerCase().includes(supermarket.toLowerCase());
+  });
+
   // Eventos
 
-  const changeInputValue = (value) => {
+  const changeInputProductValue = (value) => {
     setProduct(value);
   };
 
@@ -33,18 +41,39 @@ function App() {
     });
 
     if (value !== "" && !productFind) {
-      localStorage.set("productList", [...productsList, value]);
+      localStorage.set("productsList", [...productsList, value]);
       setProductsList([...productsList, value]);
+    }
+  };
+
+  const changeInputSupermarketValue = (value) => {
+    setSupermarket(value);
+  };
+
+  const changeSupermarketsList = (value) => {
+    setSupermarket("");
+
+    const supermarketFind = supermarketsList.find((item) => {
+      return item.toLowerCase() === value.toLowerCase();
+    });
+
+    if (value !== "" && !supermarketFind) {
+      localStorage.set("supermarketsList", [...supermarketsList, value]);
+      setSupermarketsList([...supermarketsList, value]);
     }
   };
 
   return (
     <>
       <Landing
-        onChangeInput={changeInputValue}
+        onChangeInputProduct={changeInputProductValue}
         product={product}
         onChangeProductsList={changeProductsList}
         productsList={filteredProducts}
+        onChangeInputSupermarket={changeInputSupermarketValue}
+        supermarket={supermarket}
+        onChangeSupermarketsList={changeSupermarketsList}
+        supermarketsList={filteredSupermarkets}
       />
     </>
   );

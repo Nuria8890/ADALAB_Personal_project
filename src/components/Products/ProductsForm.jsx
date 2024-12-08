@@ -1,9 +1,9 @@
 import PropTypes from "prop-types";
 import "../../styles/layout/Products/ProductsForm.scss";
 
-function ProductsForm({ onChangeInput, product, onChangeProductsList }) {
+function ProductsForm({ onChangeInputProduct, product, onChangeProductsList }) {
   const handleChangeInput = (event) => {
-    onChangeInput(event.target.value);
+    onChangeInputProduct(event.target.value);
   };
 
   const handleClickButton = (event) => {
@@ -39,7 +39,7 @@ function ProductsForm({ onChangeInput, product, onChangeProductsList }) {
 export default ProductsForm;
 
 ProductsForm.propTypes = {
-  onChangeInput: PropTypes.func.isRequired,
+  onChangeInputProduct: PropTypes.func.isRequired,
   product: PropTypes.string.isRequired,
   onChangeProductsList: PropTypes.func.isRequired,
 };

@@ -3,14 +3,19 @@ import Footer from "./Footer";
 import Header from "./Header";
 import ProductsForm from "./Products/ProductsForm";
 import ProductsList from "./Products/ProductsList";
-import Supermarkets from "./Supermarkets";
+import SupermarketsForm from "./Supermarkets/SupermarketsForm";
+import SupermarketsList from "./Supermarkets/SupermarketsList";
 import PropTypes from "prop-types";
 
 function Landing({
-  onChangeInput,
+  onChangeInputProduct,
   product,
   onChangeProductsList,
   productsList,
+  onChangeInputSupermarket,
+  supermarket,
+  onChangeSupermarketsList,
+  supermarketsList,
 }) {
   return (
     <>
@@ -19,7 +24,7 @@ function Landing({
         <section className="landing__products">
           <h3>Productos</h3>
           <ProductsForm
-            onChangeInput={onChangeInput}
+            onChangeInputProduct={onChangeInputProduct}
             product={product}
             onChangeProductsList={onChangeProductsList}
           />
@@ -27,7 +32,13 @@ function Landing({
         </section>
         <section className="landing__supers">
           <h3>Supermercados</h3>
-          <Supermarkets />
+          <SupermarketsForm
+            onChangeInputSupermarket={onChangeInputSupermarket}
+            supermarket={supermarket}
+            onChangeSupermarketsList={onChangeSupermarketsList}
+          />
+
+          <SupermarketsList supermarketsList={supermarketsList} />
         </section>
       </main>
       <Footer />
@@ -38,8 +49,12 @@ function Landing({
 export default Landing;
 
 Landing.propTypes = {
-  onChangeInput: PropTypes.func.isRequired,
+  onChangeInputProduct: PropTypes.func.isRequired,
   product: PropTypes.string.isRequired,
   onChangeProductsList: PropTypes.func.isRequired,
   productsList: PropTypes.array.isRequired,
+  onChangeInputSupermarket: PropTypes.func.isRequired,
+  supermarket: PropTypes.string.isRequired,
+  onChangeSupermarketsList: PropTypes.func.isRequired,
+  supermarketsList: PropTypes.array.isRequired,
 };
