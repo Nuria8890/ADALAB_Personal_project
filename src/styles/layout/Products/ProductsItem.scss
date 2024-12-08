@@ -1,4 +1,8 @@
 .productsItem__container {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
   padding: 2px;
-  margin: 0 5px 5px 0;
+  margin: 5px;
+  border: 1px solid black;
 }
