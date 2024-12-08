@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import "../../styles/layout/Products/ProductsForm.scss";
 
 function ProductsForm({ onChangeInput, product, onChangeProductsList }) {
   const handleChangeInput = (event) => {
@@ -12,17 +13,22 @@ function ProductsForm({ onChangeInput, product, onChangeProductsList }) {
 
   return (
     <>
-      <form action="">
+      <form action="" className="productsForm__container">
         <label>
           <input
             type="text"
             name="products"
             value={product}
-            placeholder="plátanos"
+            placeholder="Ej: plátanos"
+            className="productsForm__input"
             onChange={handleChangeInput}
           />
         </label>
-        <button type="submit" onClick={handleClickButton}>
+        <button
+          className="productsForm__add"
+          type="submit"
+          onClick={handleClickButton}
+        >
           Añadir
         </button>
       </form>
