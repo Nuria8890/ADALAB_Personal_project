@@ -1,10 +1,11 @@
 import PropTypes from "prop-types";
 import "../../styles/layout/Products/ProductsItem.scss";
 import { MdDelete } from "react-icons/md";
+import Quantity from "./Quantity";
 
 function ProductsItem({ item, index, onClickDeleteProducts }) {
   const handleClickDelete = () => {
-    onClickDeleteProducts(index);
+    onClickDeleteProducts(item);
   };
 
   return (
@@ -13,6 +14,7 @@ function ProductsItem({ item, index, onClickDeleteProducts }) {
         <input type="checkbox" name="products" id={"product" + index} />
         <label htmlFor={"product" + index}>{item}</label>
       </div>
+      <Quantity />
       <MdDelete onClick={handleClickDelete} />
     </li>
   );
