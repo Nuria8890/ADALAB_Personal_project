@@ -1,19 +1,33 @@
-# React + Vite
+**Hola!!**
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aquí te presento mi primer proyecto personal. Una página web donde puedes crear tu lista de la compra dividida por supermercados.
 
-Currently, two official plugins are available:
+## Guía de visualización de la página web:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Si quieres ver la web desde GitHub:
+
+- Arriba a la derecha, donde pone **About**, hay un **enlace**.
+
+- Si **pinchas** en ese enlace, **se abre automáticamente una ventana en tu navegador y muestra la página web**. Es completamente **responsive**, por lo que puedes llevar tu lista de la compra siempre contigo en tu teléfono móvil.
+
+### Si quieres clonarte este repositorio ten en cuenta que:
+
+- **Tienes que instalar las dependencias** locales ejecutando en la terminal el comando:
+
+```bash
+npm install
+```
+
+> **NOTA:** Necesitas tener instalado [Node JS](https://nodejs.org/) con una versión superior a la 14:
+
+- Una vez instaladas las dependencias, debes arrancar el proyecto (_si no lo haces no podrás visualizar la página_). Para ello ejecuta el comando:
+
+```bash
+npm run dev
+```
 
 ---
 
-Crear un nuevo proyecto de React:
+**Gracias por interesarte en mi trabajo ❤️**
 
-1. UNA ÚNICA VEZ EN CADA ORDENADOR: `npm install -g create-vite`.
-2. Ejecuta `create-vite my-react-app --template react`.
-3. Abre VS Code en la carpeta creada.
-4. Ejecuta `npm run dev` para arrancar el proyecto.
-5. Ejecuta `npm install prop-types` para usar las prop types
-6. Ejecuta `npm run build` para crear una versión de producción.
+Nuria 🐜
